@@ -1,0 +1,61 @@
+/* Estilos para la página web con imagen de fondo */
+body {
+    font-family: 'Roboto', sans-serif; /* Cambiar la fuente */
+    color: #000000;
+    padding: 20px;
+    background-image: url('imagen.avif'); 
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+}
+
+/* Estilos para el formulario */
+form {
+    border: 3px solid #ed5836;
+    padding: 20px;
+    background-color: rgb(255, 239, 97); 
+    max-width: 500px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 20px;
+}
+
+input, select {
+    padding: 5px;
+    width: 100%;
+}
+
+.genero-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.genero-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+.genero-options label {
+    margin-right: 20px;
+}
+
+input[type="submit"] {
+    background-color: #4bd550;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px; /* Mayor separación */
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+}

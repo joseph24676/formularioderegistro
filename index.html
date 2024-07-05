@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ingreso de Datos de Clientes</title>
+    <link rel="stylesheet" href="styles..css"> <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"> <!-- Enlace a Google Fonts -->
+</head>
+<body>
+    <h1>Formulario de Registro de Clientes</h1>
+    <form id="clienteForm" onsubmit="return mostrarMensaje();">
+        <label for="nombre">Nombres:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        <span id="nombreError" class="error"></span><br>
+
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required>
+        <span id="apellidosError" class="error"></span><br>
+
+        <label for="email">Correo Electrónico:</label>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error"></span><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion"><br>
+
+        <label for="cedula">Número de Cédula:</label>
+        <input type="tel" id="cedula" name="cedula" pattern="[0-9]{10}" required>
+        <span id="cedulaError" class="error"></span><br>
+
+        <label for="telefono">Número de Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="[0-9]{10}" required>
+        <span id="telefonoError" class="error"></span><br>
+
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="text" id="fechaNacimiento" name="fechaNacimiento" required><br>
+
+        <label>Género:</label>
+        <div class="genero-options">
+            <input type="radio" id="masculino" name="genero" value="masculino" required>
+            <label for="masculino">Masculino</label>
+            <input type="radio" id="femenino" name="genero" value="femenino" required>
+            <label for="femenino">Femenino</label>
+            <input type="radio" id="otro" name="genero" value="otro" required>
+            <label for="otro">Otro</label>
+        </div><br>
+
+        <input type="submit" value="Enviar" style="margin-top: 20px;">
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <script src="scripts.js"></script> <!-- Enlace al archivo JavaScript -->
+    <script>
+        flatpickr("#fechaNacimiento", {
+            dateFormat: "Y-m-d",
+            maxDate: "today"
+        });
+    </script>
+</body>
+</html>
